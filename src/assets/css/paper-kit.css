@@ -22,6 +22,9 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+body{
+  background: black;
+}
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -6420,9 +6423,6 @@ License - nucleoapp.com/license/
   opacity: 1;
 }
 
-.page-header .content-center {
-  margin-top: 85px;
-}
 
 .moving-clouds {
   position: absolute;
