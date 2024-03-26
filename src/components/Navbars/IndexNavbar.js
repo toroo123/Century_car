@@ -71,7 +71,7 @@ function IndexNavbar() {
             target="_blank"
             title="Coded by Creative Tim"
           >
-            Paper Kit React
+            Paper Kit Reactdasdfesfw
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
