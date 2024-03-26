@@ -87,6 +87,19 @@ function IndexNavbar() {
                   <NavLink>
                     <p onClick={() => {login()}}>Нэвтрэх</p>
                   </NavLink>
+                  {/*<NavLink*/}
+                  {/*    to="/landing-page"*/}
+                  {/*>*/}
+                  {/*  Нэвтрэх*/}
+                  {/*</NavLink>*/}
+
+                  <Button
+                      className="btn-round"
+                      color="info"
+                      href="/landing-page"
+                  >
+                    Нэвтрэх
+                  </Button>
                 </NavItem>
                 <NavItem>
                   <Button

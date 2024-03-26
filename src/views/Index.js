@@ -1,5 +1,6 @@
 import React from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import LandingPage from "views/examples/LandingPage.js"
 
 
 function Index() {
@@ -11,8 +12,10 @@ function Index() {
     };
   });
   return (
-      <IndexNavbar />
-      // <IndexHeader/>
+      <>
+        <IndexNavbar />
+{/*<LandingPage />*/}
+      </>
   );
 }
 

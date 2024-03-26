@@ -5781,7 +5781,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .section {
   padding: 70px 0;
   position: relative;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .section-with-space {
   padding: 60px 0;
