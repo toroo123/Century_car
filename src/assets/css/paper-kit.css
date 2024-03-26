@@ -3127,7 +3127,7 @@ blockquote small {
 
 /*     General overwrite     */
 body {
-  color: #66615b;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 300;
   font-family: "Montserrat", "Helvetica", Arial, sans-serif;
@@ -6589,6 +6589,14 @@ License - nucleoapp.com/license/
   .page-header .presentation-title {
     background: none !important;
   }
+}
+.logind{
+  background-color: black;
+  border-radius: 8px;
+}
+
+.intro-description {
+  color : #ffffff;
 }
 
 [class*="features-"],

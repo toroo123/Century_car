@@ -26,6 +26,17 @@ function IndexNavbar() {
   const toProfile = () => {
     setProfile(true);
     setMain(false);
+    setSign(false);
+  }
+  const toHome = () => {
+    setProfile(false);
+    setMain(true);
+    setSign(false);
+  }
+  const login = () => {
+    setProfile(false);
+    setMain(false);
+    setSign(true);
   }
 
   React.useEffect(() => {
@@ -58,19 +69,8 @@ function IndexNavbar() {
                   data-placement="bottom"
                   title="Coded by Creative Tim"
               >
-                Century Car
+                <span onClick={() => {toHome()}}>Century Car</span>
               </NavbarBrand>
-              <button
-                  aria-expanded={navbarCollapse}
-                  className={classnames("navbar-toggler navbar-toggler", {
-                    toggled: navbarCollapse,
-                  })}
-                  onClick={toggleNavbarCollapse}
-              >
-                <span className="navbar-toggler-bar bar1" />
-                <span className="navbar-toggler-bar bar2" />
-                <span className="navbar-toggler-bar bar3" />
-              </button>
             </div>
             <Collapse
                 className="justify-content-end"
@@ -84,10 +84,8 @@ function IndexNavbar() {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink
-                      to="/landing-page"
-                  >
-                    Нэвтрэх
+                  <NavLink>
+                    <p onClick={() => {login()}}>Нэвтрэх</p>
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -117,12 +115,6 @@ function IndexNavbar() {
             <Container>
               <div className="title-brand">
                 <h1 className="presentation-title">Century Car</h1>
-                {/*<div className="fog-low">*/}
-                {/*  <img alt="..." src={require("assets/img/fog-low.png")} />*/}
-                {/*</div>*/}
-                {/*<div className="fog-low right">*/}
-                {/*  <img alt="..." src={require("assets/img/fog-low.png")} />*/}
-                {/*</div>*/}
               </div>
               <h2 className="presentation-subtitle text-center">
                 Баталгаат машин худалдааны цогц системд тавтай морил!
@@ -137,29 +129,37 @@ function IndexNavbar() {
                   <img
                       alt="..."
                       className="img-circle img-no-padding img-responsive"
-                      src={require("assets/img/faces/joe-gardner-2.jpg")}
+                      src={require("assets/img/faces/logo.png")}
                   />
                 </div>
                 <div className="name">
-                  <h4 className="title">
-                    Jane Faker <br />
-                  </h4>
-                  <h6 className="description">Music Producer</h6>
+                  <h2 className="title">
+                    Бидний тухай <br />
+                  </h2>
                 </div>
               </div>
               <Row>
-                <Col className="ml-auto mr-auto text-center" md="6">
+                <Col className="ml-auto mr-auto text-center presentation-subtitle" md="6">
                   <p>
-                    An artist of considerable range, Jane Faker — the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                    and records all of his own music, giving it a warm, intimate
-                    feel with a solid groove structure.
+                    Манай сайт нь оношилгоонд орсон баталгаат автомашин зарах болон худалдаж авах сонирхолтой хүмүүс зочилоход тохиромжтой онлайн машин худалдааны сайт юм.
                   </p>
                 </Col>
               </Row>
             </Container>)
             }
-
+            {sign && (<Container>
+              <div className="logind">
+                <input placeholder="UserName"/>
+              </div>
+              <Row>
+                <Col className="ml-auto mr-auto text-center presentation-subtitle" md="6">
+                  <p>
+                    Манай сайт нь оношилгоонд орсон баталгаат автомашин зарах болон худалдаж авах сонирхолтой хүмүүс зочилоход тохиромжтой онлайн машин худалдааны сайт юм.
+                  </p>
+                </Col>
+              </Row>
+            </Container>)
+            }
 
 
           </div>
@@ -170,7 +170,7 @@ function IndexNavbar() {
               }}
           />
           <h6 className="category category-absolute">
-            fast buy
+            CenturyCar
           </h6>
         </div>
       </>
